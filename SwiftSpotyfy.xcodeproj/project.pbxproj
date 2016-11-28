@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D24D56DB2C7777DCE847567 /* Pods_SwiftSpotyfy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A62BAE9764EDA7E05A99CB8 /* Pods_SwiftSpotyfy.framework */; };
+		9C96180B1DECAFBA004E2DF2 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96180A1DECAFBA004E2DF2 /* AudioViewController.swift */; };
 		9CC8A4B81DEC7B4A0058CA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC8A4B71DEC7B4A0058CA5F /* AppDelegate.swift */; };
 		9CC8A4BD1DEC7B4A0058CA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC8A4BB1DEC7B4A0058CA5F /* Main.storyboard */; };
 		9CC8A4BF1DEC7B4A0058CA5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC8A4BE1DEC7B4A0058CA5F /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		3A62BAE9764EDA7E05A99CB8 /* Pods_SwiftSpotyfy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftSpotyfy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C96180A1DECAFBA004E2DF2 /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		9CC8A4B41DEC7B4A0058CA5F /* SwiftSpotyfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSpotyfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC8A4B71DEC7B4A0058CA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CC8A4BC1DEC7B4A0058CA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				9CC8A4BE1DEC7B4A0058CA5F /* Assets.xcassets */,
 				9CC8A4C01DEC7B4A0058CA5F /* LaunchScreen.storyboard */,
 				9CC8A4C31DEC7B4A0058CA5F /* Info.plist */,
+				9C96180A1DECAFBA004E2DF2 /* AudioViewController.swift */,
 			);
 			path = SwiftSpotyfy;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				9CC8A4B81DEC7B4A0058CA5F /* AppDelegate.swift in Sources */,
 				9CC8A4CA1DEC810F0058CA5F /* TableViewController.swift in Sources */,
+				9C96180B1DECAFBA004E2DF2 /* AudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

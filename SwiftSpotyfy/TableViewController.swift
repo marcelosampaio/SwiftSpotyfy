@@ -10,11 +10,19 @@ import UIKit
 import Alamofire
 
 
+struct post {
+    let mainImage : UIImage!
+    let name : String!
+    
+}
+
+
+
 class TableViewController: UITableViewController {
 
     // MARK: Working Variables
     var searchURL = "https://api.spotify.com/v1/search?q=Shawn+Mendes&type=track"
-    var names = [String]()
+    var posts = [post]()
     
     
     // Object Alias or Type Alias
@@ -52,13 +60,27 @@ class TableViewController: UITableViewController {
                     
                     for i in 0..<items.count{
                         let item = items[i]
+                        
+                        // Track's name
                         let name = item["name"] as! String
                         
-                        // append to my array
-                        names.append(name)
-                        
-                        // reload data in table view
-                        self.tableView.reloadData()
+                        // Image of the album
+                        if let album = item["album"] as? JSONStandard {
+                            if let images = album["images"] as? [JSONStandard] {
+                                let imageData = images[0]  // first occurrance of the images
+                                let mainImageURL = URL(string: imageData["url"] as! String)
+                                let mainImageData = try Data(contentsOf: mainImageURL!)
+                                
+                                // finally the image itself :)
+                                let mainImage = UIImage(data: mainImageData)
+
+                                posts.append(post.init(mainImage: mainImage!, name: name))
+                                
+                                // reload data in table view
+                                self.tableView.reloadData()
+                                
+                            }
+                        }
                         
                     }
                 }
@@ -79,14 +101,16 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return names.count
+        return posts.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        cell.textLabel?.text = names[indexPath.row]
+        cell.textLabel?.text = posts[indexPath.row].name
+        cell.imageView?.image = posts[indexPath.row].mainImage
+        
 
         return cell
     }
