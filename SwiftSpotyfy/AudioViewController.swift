@@ -7,20 +7,22 @@
 //
 
 import UIKit
+import AVFoundation
+
+
 
 class AudioViewController: UIViewController {
 
     // Working Variables
     var image = UIImage()
     var mainSongTitle = String()
+    var previewURL = String()
     
     // Outlets
     
     @IBOutlet var background: UIImageView!
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var songTitle: UILabel!
-    
-    
     
     
     // MARK: - View Life Cycle
@@ -33,6 +35,38 @@ class AudioViewController: UIViewController {
         background.image=image
         mainImageView.image=image
         
+        // play music preview
+        
+        self.downloadFileFromURL(url: URL(string: previewURL)!)
+        
+        
+        
+    }
+    
+    
+    // MARK: - Music Preview
+    
+    private func downloadFileFromURL(url: URL) {
+        var downloadTask = URLSessionDownloadTask()
+        
+        downloadTask = URLSession.shared.downloadTask(with: url, completionHandler: { (customURL, response, error) in
+            self.play(url: customURL!)
+        })
+        
+        downloadTask.resume()
+    }
+    
+    
+    private func play(url: URL) {
+        
+        do{
+            player = try AVAudioPlayer(contentsOf: url)
+            player.prepareToPlay()
+            player.play()
+        }
+        catch{
+            print(error)
+        }
         
     }
 
