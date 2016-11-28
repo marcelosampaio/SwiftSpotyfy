@@ -54,7 +54,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4q9-9K-hzN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4q9-9K-hzN">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4q9-9K-hzN" secondAttribute="height" multiplier="125:201" id="Y5m-QM-Mq1"/>
@@ -110,6 +110,11 @@
                             <constraint firstItem="VDB-sX-3BQ" firstAttribute="leading" secondItem="gjE-x6-XFo" secondAttribute="leading" id="wZE-0L-r3a"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="background" destination="4q9-9K-hzN" id="hlh-2C-u7X"/>
+                        <outlet property="mainImageView" destination="3N0-Bt-3Va" id="Lyq-DM-gw7"/>
+                        <outlet property="songTitle" destination="Zbk-4c-kAw" id="6db-XL-uHu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yil-Ja-G1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
