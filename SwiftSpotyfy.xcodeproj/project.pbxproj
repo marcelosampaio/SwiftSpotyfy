@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D24D56DB2C7777DCE847567 /* Pods_SwiftSpotyfy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A62BAE9764EDA7E05A99CB8 /* Pods_SwiftSpotyfy.framework */; };
 		9CC8A4B81DEC7B4A0058CA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC8A4B71DEC7B4A0058CA5F /* AppDelegate.swift */; };
-		9CC8A4BA1DEC7B4A0058CA5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC8A4B91DEC7B4A0058CA5F /* ViewController.swift */; };
 		9CC8A4BD1DEC7B4A0058CA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC8A4BB1DEC7B4A0058CA5F /* Main.storyboard */; };
 		9CC8A4BF1DEC7B4A0058CA5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC8A4BE1DEC7B4A0058CA5F /* Assets.xcassets */; };
 		9CC8A4C21DEC7B4A0058CA5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC8A4C01DEC7B4A0058CA5F /* LaunchScreen.storyboard */; };
+		9CC8A4CA1DEC810F0058CA5F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC8A4C91DEC810F0058CA5F /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A62BAE9764EDA7E05A99CB8 /* Pods_SwiftSpotyfy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftSpotyfy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC8A4B41DEC7B4A0058CA5F /* SwiftSpotyfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSpotyfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC8A4B71DEC7B4A0058CA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9CC8A4B91DEC7B4A0058CA5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9CC8A4BC1DEC7B4A0058CA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CC8A4BE1DEC7B4A0058CA5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CC8A4C11DEC7B4A0058CA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CC8A4C31DEC7B4A0058CA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CC8A4C91DEC810F0058CA5F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		A20147B9AE7918BEE741BF4B /* Pods-SwiftSpotyfy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSpotyfy.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSpotyfy/Pods-SwiftSpotyfy.release.xcconfig"; sourceTree = "<group>"; };
+		B25C31017D76D8A032861A26 /* Pods-SwiftSpotyfy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSpotyfy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSpotyfy/Pods-SwiftSpotyfy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D24D56DB2C7777DCE847567 /* Pods_SwiftSpotyfy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B41B25FDB1385593C1D1FC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A62BAE9764EDA7E05A99CB8 /* Pods_SwiftSpotyfy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9CC8A4AB1DEC7B490058CA5F = {
 			isa = PBXGroup;
 			children = (
 				9CC8A4B61DEC7B4A0058CA5F /* SwiftSpotyfy */,
 				9CC8A4B51DEC7B4A0058CA5F /* Products */,
+				D14498D9A2378F3D92D97A91 /* Pods */,
+				6B41B25FDB1385593C1D1FC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +70,22 @@
 			isa = PBXGroup;
 			children = (
 				9CC8A4B71DEC7B4A0058CA5F /* AppDelegate.swift */,
-				9CC8A4B91DEC7B4A0058CA5F /* ViewController.swift */,
+				9CC8A4C91DEC810F0058CA5F /* TableViewController.swift */,
 				9CC8A4BB1DEC7B4A0058CA5F /* Main.storyboard */,
 				9CC8A4BE1DEC7B4A0058CA5F /* Assets.xcassets */,
 				9CC8A4C01DEC7B4A0058CA5F /* LaunchScreen.storyboard */,
 				9CC8A4C31DEC7B4A0058CA5F /* Info.plist */,
 			);
 			path = SwiftSpotyfy;
+			sourceTree = "<group>";
+		};
+		D14498D9A2378F3D92D97A91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B25C31017D76D8A032861A26 /* Pods-SwiftSpotyfy.debug.xcconfig */,
+				A20147B9AE7918BEE741BF4B /* Pods-SwiftSpotyfy.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CC8A4C61DEC7B4A0058CA5F /* Build configuration list for PBXNativeTarget "SwiftSpotyfy" */;
 			buildPhases = (
+				0A07090140F8DDDDE786B135 /* [CP] Check Pods Manifest.lock */,
 				9CC8A4B01DEC7B4A0058CA5F /* Sources */,
 				9CC8A4B11DEC7B4A0058CA5F /* Frameworks */,
 				9CC8A4B21DEC7B4A0058CA5F /* Resources */,
+				033E988CF1F1F3FDCA74E1FE /* [CP] Embed Pods Frameworks */,
+				B37458772FB79777E394B399 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +159,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		033E988CF1F1F3FDCA74E1FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftSpotyfy/Pods-SwiftSpotyfy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A07090140F8DDDDE786B135 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B37458772FB79777E394B399 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftSpotyfy/Pods-SwiftSpotyfy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9CC8A4B01DEC7B4A0058CA5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CC8A4BA1DEC7B4A0058CA5F /* ViewController.swift in Sources */,
 				9CC8A4B81DEC7B4A0058CA5F /* AppDelegate.swift in Sources */,
+				9CC8A4CA1DEC810F0058CA5F /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +334,7 @@
 		};
 		9CC8A4C71DEC7B4A0058CA5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B25C31017D76D8A032861A26 /* Pods-SwiftSpotyfy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5U294U2N56;
@@ -266,12 +342,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MAS.SwiftSpotyfy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
 		9CC8A4C81DEC7B4A0058CA5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20147B9AE7918BEE741BF4B /* Pods-SwiftSpotyfy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5U294U2N56;
@@ -279,7 +356,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MAS.SwiftSpotyfy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -302,6 +379,7 @@
 				9CC8A4C81DEC7B4A0058CA5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,6 @@
+framework module Pods_SwiftSpotyfy {
+  umbrella header "Pods-SwiftSpotyfy-umbrella.h"
+
+  export *
+  module * { export * }
+}
