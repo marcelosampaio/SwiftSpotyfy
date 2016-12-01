@@ -26,8 +26,12 @@ var playerIsRunning = false
 
 
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, UISearchBarDelegate {
 
+    // MARK: - Outlets
+    @IBOutlet var searchBar: UISearchBar!
+    
+    
     // MARK: - Working Variables
     var searchURL = "https://api.spotify.com/v1/search?q=Matanza&type=track"
     var posts = [post]()
@@ -39,11 +43,6 @@ class TableViewController: UITableViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Searching with alamofire help
-        callAlamo(url: searchURL)
-        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +68,9 @@ class TableViewController: UITableViewController {
             let readableJSON = try JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as! JSONStandard
             
             print ("👉  readable JSON: \(readableJSON)")
+            
+            // erase posts array
+            posts.removeAll()
             
 
             if let tracks = readableJSON["tracks"] as? JSONStandard{
@@ -162,4 +164,25 @@ class TableViewController: UITableViewController {
         }
     }
 
+    
+    // MARK: - Search Bar Delegate
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        //
+        print("search button was tapped")
+        
+        let keywords = searchBar.text
+        let searchArgument = keywords?.replacingOccurrences(of: " ", with: "+")
+        
+        searchURL = "https://api.spotify.com/v1/search?q=\(searchArgument!)&type=track"
+        // Searching with alamofire help
+        callAlamo(url: searchURL)
+        
+        // dismiss keyboard
+        self.view.endEditing(true)
+        
+        
+    }
+    
+    
+    
 }

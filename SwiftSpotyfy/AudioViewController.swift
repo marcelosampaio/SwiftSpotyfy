@@ -23,6 +23,7 @@ class AudioViewController: UIViewController {
     @IBOutlet var background: UIImageView!
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var songTitle: UILabel!
+    @IBOutlet var playAndPauseButton: UIButton!
     
     
     // MARK: - View Life Cycle
@@ -36,8 +37,6 @@ class AudioViewController: UIViewController {
         mainImageView.image=image
         
         // play music preview
-        
-        
         self.downloadFileFromURL(url: URL(string: previewURL)!)
         
         
@@ -72,6 +71,20 @@ class AudioViewController: UIViewController {
         
     }
 
+    // MARK: UI Action
+    @IBAction func playAndPause(_ sender: Any) {
+        if player.isPlaying{
+            player.pause()
+            playerIsRunning=false
+            playAndPauseButton.setTitle("Play", for: UIControlState.normal)
+        }else{
+            // play music preview
+            player.play()
+            playerIsRunning=true
+            playAndPauseButton.setTitle("Pause", for: UIControlState.normal)
+            
+        }
+    }
     
     
     
