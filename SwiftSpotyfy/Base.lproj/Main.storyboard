@@ -110,8 +110,11 @@
                                                 <constraint firstAttribute="width" constant="240" id="Y35-np-gak"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Zbk-4c-kAw">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Zbk-4c-kAw">
                                             <rect key="frame" x="40" y="293" width="240" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="75" id="PaX-f2-JKa"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -119,11 +122,11 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="3N0-Bt-3Va" firstAttribute="top" secondItem="xTI-ep-09U" secondAttribute="top" constant="36" id="6B5-Tm-bOT"/>
-                                        <constraint firstItem="Zbk-4c-kAw" firstAttribute="leading" secondItem="3N0-Bt-3Va" secondAttribute="leading" id="7Yn-JI-mGu"/>
+                                        <constraint firstItem="Zbk-4c-kAw" firstAttribute="leading" secondItem="xTI-ep-09U" secondAttribute="leading" constant="40" id="Cat-dU-l8x"/>
                                         <constraint firstAttribute="trailing" secondItem="3N0-Bt-3Va" secondAttribute="trailing" constant="40" id="F7R-Tb-tBC"/>
-                                        <constraint firstItem="Zbk-4c-kAw" firstAttribute="trailing" secondItem="3N0-Bt-3Va" secondAttribute="trailing" id="OX4-s9-efu"/>
                                         <constraint firstItem="3N0-Bt-3Va" firstAttribute="leading" secondItem="xTI-ep-09U" secondAttribute="leading" constant="40" id="UVl-vB-2cI"/>
-                                        <constraint firstItem="Zbk-4c-kAw" firstAttribute="top" secondItem="3N0-Bt-3Va" secondAttribute="bottom" constant="17" id="hO2-JS-Kuf"/>
+                                        <constraint firstItem="Zbk-4c-kAw" firstAttribute="top" secondItem="3N0-Bt-3Va" secondAttribute="bottom" constant="17" id="Y7R-dW-kiT"/>
+                                        <constraint firstAttribute="trailing" secondItem="Zbk-4c-kAw" secondAttribute="trailing" constant="40" id="Zcy-bw-e3L"/>
                                     </constraints>
                                 </view>
                                 <constraints>
