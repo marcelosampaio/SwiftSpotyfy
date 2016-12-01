@@ -126,8 +126,16 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        cell.textLabel?.text = posts[indexPath.row].name
-        cell.imageView?.image = posts[indexPath.row].mainImage
+//        cell.textLabel?.text = posts[indexPath.row].name
+//        cell.imageView?.image = posts[indexPath.row].mainImage
+        
+        
+        let imageView = cell.viewWithTag(100) as! UIImageView
+
+        let title = cell.viewWithTag(101) as! UILabel
+        
+        imageView.image = posts[indexPath.row].mainImage
+        title.text = posts[indexPath.row].name
         
 
         return cell
@@ -136,6 +144,12 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "showDetail", sender: self)
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 90.0
+    }
+
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,12 +20,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="BOR-5N-hbf">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="BOR-5N-hbf">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BOR-5N-hbf" id="Y6a-vS-M0c">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDj-6l-vEc">
+                                            <rect key="frame" x="15" y="4" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="8Hy-Sv-aXC"/>
+                                                <constraint firstAttribute="height" constant="80" id="cI2-Nv-JMO"/>
+                                                <constraint firstAttribute="width" secondItem="qDj-6l-vEc" secondAttribute="height" multiplier="1:1" id="juA-Qy-AoE"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="40"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-Ck-CWS">
+                                            <rect key="frame" x="103" y="14" width="264" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="0Gf-Ck-CWS" secondAttribute="height" multiplier="22:5" id="6tS-oz-7d8"/>
+                                                <constraint firstAttribute="height" constant="60" id="gYF-1k-yWJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qDj-6l-vEc" firstAttribute="top" secondItem="Y6a-vS-M0c" secondAttribute="top" constant="4" id="8d4-3i-pdY"/>
+                                        <constraint firstItem="0Gf-Ck-CWS" firstAttribute="leading" secondItem="qDj-6l-vEc" secondAttribute="trailing" constant="8" id="ILT-r1-M6b"/>
+                                        <constraint firstItem="qDj-6l-vEc" firstAttribute="leading" secondItem="Y6a-vS-M0c" secondAttribute="leading" constant="15" id="JTh-U1-8cw"/>
+                                        <constraint firstAttribute="bottom" secondItem="qDj-6l-vEc" secondAttribute="bottom" constant="5" id="LpC-tr-14b"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="0Gf-Ck-CWS" secondAttribute="bottom" constant="7" id="e7C-Oe-eZl"/>
+                                        <constraint firstItem="0Gf-Ck-CWS" firstAttribute="top" secondItem="Y6a-vS-M0c" secondAttribute="topMargin" constant="6" id="f70-WH-mQg"/>
+                                        <constraint firstItem="0Gf-Ck-CWS" firstAttribute="trailing" secondItem="Y6a-vS-M0c" secondAttribute="trailingMargin" id="pat-Xa-gxO"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
