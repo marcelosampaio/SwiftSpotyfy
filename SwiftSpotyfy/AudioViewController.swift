@@ -39,7 +39,7 @@ class AudioViewController: UIViewController {
         
         
         self.downloadFileFromURL(url: URL(string: previewURL)!)
-        
+        playerIsRunning = true
         
         
     }

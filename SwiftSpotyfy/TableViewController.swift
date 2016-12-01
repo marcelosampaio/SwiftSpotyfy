@@ -21,7 +21,7 @@ struct post {
 
 // Audio Player
 var player = AVAudioPlayer()
-
+var playerIsRunning = false
 
 
 
@@ -44,6 +44,14 @@ class TableViewController: UITableViewController {
         // Searching with alamofire help
         callAlamo(url: searchURL)
         
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if playerIsRunning {
+            player.stop()
+            playerIsRunning=false
+        }
         
     }
 

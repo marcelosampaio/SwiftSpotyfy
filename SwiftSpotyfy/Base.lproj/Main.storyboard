@@ -70,6 +70,8 @@
                                             <rect key="frame" x="67" y="181" width="240" height="240"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="3N0-Bt-3Va" secondAttribute="height" multiplier="1:1" id="5f3-gw-0di"/>
+                                                <constraint firstAttribute="width" constant="240" id="FgZ-B9-7zI"/>
+                                                <constraint firstAttribute="height" constant="240" id="RK5-gL-dBu"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Zbk-4c-kAw">
