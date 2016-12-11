@@ -35,7 +35,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
     // MARK: - Working Variables
     var searchURL = "https://api.spotify.com/v1/search?q=Matanza&type=track"
     var posts = [post]()
-    
+    var counter = 0
     
     // Object Alias or Type Alias
     typealias JSONStandard = [String : AnyObject]
@@ -68,12 +68,18 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
             let readableJSON = try JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as! JSONStandard
             
             print ("👉  readable JSON: \(readableJSON)")
-            
-            // erase posts array
-            posts.removeAll()
-            
-
+        
             if let tracks = readableJSON["tracks"] as? JSONStandard{
+                
+                
+                // Get limit and next url to be called
+                let limit = tracks["limit"] as! Int
+                let next = tracks["next"] as! String
+                
+                
+                print("*** here limit: \(limit)  next: \(next)")
+                
+                
                 if let items = tracks["items"] as? [JSONStandard] {
                     
                     for i in 0..<items.count{
@@ -95,6 +101,10 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
                                 let mainImage = UIImage(data: mainImageData)
 
                                 posts.append(post.init(mainImage: mainImage!, name: name, previewURL: previewURL))
+                                
+                                // increment counter
+                                counter = counter + 1
+                                
                                 
                                 // reload data in table view
                                 self.tableView.reloadData()
@@ -174,6 +184,12 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
         let searchArgument = keywords?.replacingOccurrences(of: " ", with: "+")
         
         searchURL = "https://api.spotify.com/v1/search?q=\(searchArgument!)&type=track"
+        
+        // erase posts array
+        posts.removeAll()
+        // reset initial counter
+        counter = 0
+        
         // Searching with alamofire help
         callAlamo(url: searchURL)
         
